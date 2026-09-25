@@ -1,0 +1,115 @@
+.search-form {
+  background: var(--paper-raised);
+  border-radius: var(--radius-l);
+  padding: 28px;
+  box-shadow: var(--shadow-float);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.search-form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+.search-form-submit { margin-top: 4px; padding: 14px; font-size: 1rem; }
+
+.station-input { position: relative; }
+.station-dropdown {
+  position: absolute; top: calc(100% + 6px); left: 0; right: 0;
+  background: var(--paper-raised); border: 1px solid var(--paper-line); border-radius: var(--radius-s);
+  box-shadow: var(--shadow-card); list-style: none; margin: 0; padding: 6px; z-index: 30; max-height: 260px; overflow-y: auto;
+}
+.station-dropdown li { padding: 10px 12px; border-radius: var(--radius-s); cursor: pointer; display: flex; justify-content: space-between; gap: 8px; }
+.station-dropdown li:hover { background: var(--teal-soft); }
+.station-name { font-weight: 700; }
+.station-meta { color: var(--text-soft); font-size: 0.82rem; }
+
+.search-results-layout { display: grid; grid-template-columns: 260px 1fr; gap: 32px; align-items: start; }
+.search-filters { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 20px; }
+.search-filter-group { display: flex; flex-direction: column; gap: 8px; }
+.search-filter-group h4 { font-size: 0.85rem; margin: 0; }
+.radio-row { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--text-soft); }
+
+.journey-list { display: flex; flex-direction: column; gap: 16px; }
+.journey-card { padding: 22px 24px; display: flex; flex-direction: column; gap: 14px; }
+.journey-card-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.journey-card-times { display: grid; grid-template-columns: 1fr 2fr 1fr; align-items: center; gap: 16px; }
+.journey-time { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; }
+.journey-sub { font-size: 0.8rem; color: var(--text-soft); }
+.journey-mid { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.journey-duration { font-size: 0.82rem; font-weight: 700; color: var(--text-soft); }
+.journey-transfers { font-size: 0.78rem; color: var(--text-soft); }
+.journey-highlights { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 0.84rem; color: var(--text-soft); }
+.journey-highlights li::before { content: "\2022"; margin-right: 6px; color: var(--teal); }
+
+/* Class/fare chips shown on a direct train's result card */
+.journey-classes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+  overflow-x: hidden;
+}
+.class-chip-mini {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  background: var(--paper);
+  border: 1px solid var(--paper-line);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+.class-chip-mini-label { font-weight: 700; color: var(--teal); }
+.class-chip-mini-fare { color: var(--text-soft); }
+.class-chip-mini-sold-out { opacity: 0.55; }
+.class-chip-mini-sold-out .class-chip-mini-fare { text-decoration: line-through; }
+
+.journey-card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid var(--paper-line); }
+.journey-fare { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; }
+
+@media (max-width: 860px) {
+  .search-results-layout { grid-template-columns: 1fr; }
+  .search-filters { position: static; }
+  .journey-card-times { grid-template-columns: 1fr; text-align: center; }
+}
+
+/* Station suggestions */
+.station-selected { font-size: 0.78rem; color: var(--text-soft); }
+.station-dropdown li { flex-direction: column; justify-content: flex-start; gap: 2px; }
+.station-dropdown .station-note { color: var(--text-soft); font-size: 0.85rem; cursor: default; }
+.station-dropdown .station-note:hover { background: transparent; }
+.station-option-active { background: var(--teal-soft); }
+.station-line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.station-code {
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; color: var(--teal);
+  background: var(--teal-soft); border-radius: 6px; padding: 2px 7px;
+}
+.station-option-active .station-code { background: var(--paper-raised); }
+
+/* Departure time and budget */
+.search-form-filters { grid-template-columns: 2fr 1fr; align-items: start; }
+.chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px;
+  border: 1px solid var(--paper-line); background: var(--paper-raised); color: var(--text);
+  border-radius: var(--radius-s); padding: 8px 12px; font-size: 0.85rem; font-weight: 700; cursor: pointer;
+}
+.chip:hover { border-color: var(--ink-line); }
+.chip-on { background: var(--ink); border-color: var(--ink); color: var(--text-on-ink); }
+.chip-sub { font-size: 0.68rem; font-weight: 500; opacity: 0.75; }
+.time-range { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+.time-range span { color: var(--text-soft); font-size: 0.85rem; }
+.search-form-budget input { margin-top: 8px; }
+
+/* Results */
+.active-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.active-filters .pill { display: inline-flex; align-items: center; gap: 6px; }
+.active-filters .pill button {
+  border: 0; background: transparent; color: inherit; font-size: 1rem; line-height: 1; cursor: pointer; padding: 0;
+}
+.result-count { margin: 0; font-size: 0.85rem; color: var(--text-soft); }
+.empty-state { padding: 32px; text-align: center; }
+.empty-state-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 8px; }
+
+@media (max-width: 860px) {
+  .search-form-filters { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,147 @@
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: var(--radius-s);
+  padding: 12px 22px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+  font-family: var(--font-body);
+}
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+
+.btn-primary { background: var(--amber); color: #241505; }
+.btn-primary:hover:not(:disabled) { background: var(--amber-strong); }
+
+.btn-dark { background: var(--ink); color: var(--text-on-ink); }
+.btn-dark:hover:not(:disabled) { background: var(--ink-soft); }
+
+.btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--paper-line); }
+.btn-ghost:hover:not(:disabled) { border-color: var(--ink-line); }
+
+.btn-danger { background: var(--red-soft); color: var(--red); }
+.btn-danger:hover:not(:disabled) { background: #f5d9d5; }
+
+.btn-block { width: 100%; }
+.btn-sm { padding: 8px 14px; font-size: 0.85rem; }
+
+/* Inputs */
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 0.8rem; font-weight: 700; color: var(--text-soft); }
+.field input, .field select, .field textarea {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  padding: 11px 13px;
+  border-radius: var(--radius-s);
+  border: 1.5px solid var(--paper-line);
+  background: var(--paper-raised);
+  color: var(--text);
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px var(--teal-soft);
+}
+.field-error { color: var(--red); font-size: 0.8rem; }
+
+/* Cards */
+.card {
+  background: var(--paper-raised);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--paper-line);
+}
+
+/* Banners */
+.banner { border-radius: var(--radius-s); padding: 12px 16px; font-size: 0.9rem; }
+.banner-error { background: var(--red-soft); color: var(--red); }
+.banner-info { background: var(--teal-soft); color: var(--teal); }
+
+/* Pill / status */
+.pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  border-radius: 999px; padding: 4px 12px; font-size: 0.78rem; font-weight: 700;
+}
+.pill-teal { background: var(--teal-soft); color: var(--teal); }
+.pill-amber { background: #FBF0DC; color: var(--amber-strong); }
+.pill-red { background: var(--red-soft); color: var(--red); }
+.pill-ink { background: var(--ink-soft); color: var(--text-on-ink); }
+
+/* Route line visualization: the recurring structural device for stops/transfers */
+.route-line { display: flex; align-items: center; gap: 0; width: 100%; }
+.route-line .stop {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--ink); flex: none; position: relative; z-index: 1;
+}
+.route-line .stop.transfer { background: var(--amber); width: 12px; height: 12px; }
+.route-line .seg { flex: 1; height: 2px; background: var(--paper-line); position: relative; }
+.route-line .seg.bus::after, .route-line .seg.train::after {
+  content: ""; position: absolute; inset: 0; height: 2px;
+  background: repeating-linear-gradient(to right, var(--ink-line) 0 6px, transparent 6px 10px);
+}
+.route-line .seg.train::after { background: var(--ink-line); }
+
+/* Loading skeleton */
+.skeleton { background: linear-gradient(90deg, var(--paper-line) 25%, #eee7d6 37%, var(--paper-line) 63%); background-size: 400% 100%; animation: shimmer 1.4s ease infinite; border-radius: var(--radius-s); }
+@keyframes shimmer { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
+
+/* Stepper for the booking flow */
+.stepper { display: flex; align-items: center; gap: 6px; }
+.stepper .step { display: flex; align-items: center; gap: 8px; color: var(--text-soft); font-size: 0.82rem; font-weight: 700; }
+.stepper .step.active { color: var(--ink); }
+.stepper .step.done { color: var(--teal); }
+.stepper .dot { width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--paper-line); font-size: 0.7rem; }
+.stepper .step.active .dot { background: var(--amber); color: #241505; }
+.stepper .step.done .dot { background: var(--teal); color: white; }
+.stepper .bar { flex: 1; height: 2px; background: var(--paper-line); }
+.stepper .bar.done { background: var(--teal); }
+
+/* Seat map */
+.seat-map { display: flex; flex-wrap: wrap; gap: 32px; }
+.coach-grid { display: grid; gap: 8px; }
+.seat {
+  width: 40px; height: 40px; border-radius: 10px;
+  border: 1.5px solid var(--paper-line); background: var(--paper-raised);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.72rem; font-weight: 700; color: var(--text-soft);
+  cursor: pointer; transition: transform 0.1s ease, background 0.15s ease, border-color 0.15s ease;
+}
+.seat:hover:not(.booked):not(.held) { border-color: var(--teal); transform: translateY(-1px); }
+.seat.selected { background: var(--amber); border-color: var(--amber-strong); color: #241505; transform: scale(1.04); }
+.seat.booked { background: var(--ink-soft); border-color: var(--ink-soft); color: var(--text-on-ink-soft); cursor: not-allowed; }
+.seat.held { background: #EDE7D8; border-color: var(--paper-line); color: var(--text-soft); cursor: not-allowed; }
+.seat.aisle-gap { visibility: hidden; }
+
+/* Ticket */
+.ticket {
+  position: relative;
+  background: var(--paper-raised);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-card);
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  overflow: hidden;
+}
+.ticket::before {
+  content: "";
+  position: absolute; top: 0; bottom: 0; right: 220px;
+  width: 0; border-right: 2px dashed var(--paper-line);
+}
+.ticket .ticket-notch { position: absolute; width: 24px; height: 24px; background: var(--paper); border-radius: 50%; right: 208px; }
+.ticket .ticket-notch.top { top: -12px; }
+.ticket .ticket-notch.bottom { bottom: -12px; }
+.ticket-qr { background: var(--ink); color: var(--text-on-ink); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px; }
+.ticket-qr img { background: white; border-radius: 8px; padding: 8px; }
+
+@media (max-width: 720px) {
+  .ticket { grid-template-columns: 1fr; }
+  .ticket::before { display: none; }
+  .ticket .ticket-notch { display: none; }
+}

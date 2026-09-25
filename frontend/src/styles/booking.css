@@ -1,0 +1,78 @@
+.segment-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid var(--paper-line);
+}
+.segment-row:first-of-type { border-top: none; margin-top: 12px; }
+
+.confirmation-card {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 40px 32px;
+  text-align: center;
+}
+.confirmation-badge {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: var(--teal-soft); color: var(--teal);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem; margin: 0 auto 16px;
+  animation: pop-in 0.3s ease-out;
+}
+@keyframes pop-in { from { transform: scale(0.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+/* Class selection (booking step 2) */
+.class-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin: 14px 0 20px;
+}
+.class-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  text-align: left;
+  background: var(--paper-raised);
+  border: 1.5px solid var(--paper-line);
+  border-radius: var(--radius-m);
+  padding: 14px 16px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+.class-option:hover:not(.disabled) { border-color: var(--teal); transform: translateY(-2px); box-shadow: var(--shadow-card); }
+.class-option.selected { border-color: var(--amber-strong); box-shadow: 0 0 0 2px var(--amber) inset; background: #FFFCF6; }
+.class-option.disabled { opacity: 0.55; cursor: not-allowed; }
+.class-option-top { display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 8px; }
+.class-option-code { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; }
+.class-option-name { font-size: 0.82rem; color: var(--text-soft); }
+.class-option-fare { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
+.class-option-sub { font-size: 0.72rem; color: var(--text-soft); }
+
+/* Recap of chosen classes, shown from seat selection through passenger details */
+.class-summary-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 20px;
+  background: var(--paper-raised);
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-s);
+  padding: 12px 16px;
+  margin-top: 18px;
+  font-size: 0.85rem;
+}
+.class-summary-item { display: flex; align-items: center; gap: 6px; color: var(--text-soft); }
+.class-summary-code {
+  font-weight: 800; font-size: 0.75rem; color: var(--teal); background: var(--teal-soft);
+  border-radius: 6px; padding: 2px 7px;
+}
+.class-summary-total { margin-left: auto; font-weight: 700; color: var(--text); }
+
+@media (max-width: 520px) {
+  .class-options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .class-summary-total { margin-left: 0; }
+}

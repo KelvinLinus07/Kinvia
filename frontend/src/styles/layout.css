@@ -1,0 +1,19 @@
+.app-shell { min-height: 100%; display: flex; flex-direction: column; }
+main { flex: 1; }
+
+.top-nav { background: var(--paper); border-bottom: 1px solid var(--paper-line); position: sticky; top: 0; z-index: 20; }
+.top-nav-inner { display: flex; align-items: center; gap: 32px; height: 68px; }
+.brand { font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; text-decoration: none; color: var(--ink); }
+.top-nav-links { display: flex; gap: 22px; flex: 1; }
+.nav-link { text-decoration: none; color: var(--text-soft); font-weight: 600; font-size: 0.92rem; padding: 6px 0; border-bottom: 2px solid transparent; }
+.nav-link.active { color: var(--ink); border-color: var(--amber); }
+.top-nav-auth { display: flex; align-items: center; gap: 12px; }
+.top-nav-user { font-weight: 700; color: var(--text-soft); font-size: 0.9rem; }
+
+.site-footer { background: var(--ink); color: var(--text-on-ink-soft); padding: 24px 0; margin-top: 64px; font-size: 0.85rem; }
+.site-footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+@media (max-width: 760px) {
+  .top-nav-links { display: none; }
+  .top-nav-inner { height: 60px; }
+}

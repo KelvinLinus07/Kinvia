@@ -1,0 +1,91 @@
+name,code,city,state,latitude,longitude
+Howrah Junction,HWH,Kolkata,West Bengal,22.5839,88.3425
+Kolkata Sealdah,SEAL,Kolkata,West Bengal,22.5697,88.3697
+Asansol Junction,ASAN,Asansol,West Bengal,23.685,86.974
+Kharagpur Junction,KHAR,Kharagpur,West Bengal,22.3396,87.32
+New Jalpaiguri Junction,NEWJ,Siliguri,West Bengal,26.695,88.4102
+Durgapur,DURG,Durgapur,West Bengal,23.4877,87.3197
+Malda Town,MALD,Malda,West Bengal,25.0108,88.1411
+Burdwan Junction,BURD,Bardhaman,West Bengal,23.2513,87.8555
+Santragachi Junction,SANT,Howrah,West Bengal,22.5838,88.2822
+New Cooch Behar,NEWC,Cooch Behar,West Bengal,26.33,89.47
+Rampurhat Junction,RAMP,Rampurhat,West Bengal,24.1741,87.7803
+Bandel Junction,BAND,Bandel,West Bengal,22.931,88.3814
+Kolkata Railway Station,KOLK,Kolkata,West Bengal,22.6172,88.3789
+Adra Junction,ADRA,Adra,West Bengal,23.498,86.68
+Bolpur Shantiniketan,BOLP,Bolpur,West Bengal,23.68,87.71
+Bankura Junction,BANK,Bankura,West Bengal,23.2324,87.065
+Katwa Junction,KATW,Katwa,West Bengal,23.65,88.13
+Hijli,HIJL,Kharagpur,West Bengal,22.32,87.31
+Purulia Junction,PURU,Purulia,West Bengal,23.332,86.365
+Dankuni Junction,DANK,Dankuni,West Bengal,22.68,88.3
+Chittaranjan,CHIT,Chittaranjan,West Bengal,23.87,86.85
+Siliguri Junction,SGUJ,Siliguri,West Bengal,26.7271,88.3953
+Ranaghat Junction,RANA,Ranaghat,West Bengal,23.18,88.58
+Andal Junction,ANDA,Andal,West Bengal,23.59,87.24
+Krishnanagar City Junction,KRIS,Krishnanagar,West Bengal,23.41,88.49
+Digha,DIGH,Digha,West Bengal,21.63,87.55
+Shalimar,SHAL,Howrah,West Bengal,22.56,88.31
+Midnapore,MIDN,Midnapore,West Bengal,22.43,87.32
+Berhampore Court,BERH,Berhampore,West Bengal,24.1,88.25
+Naihati Junction,NAIH,Naihati,West Bengal,22.89,88.42
+Patna Junction,PNBE,Patna,Bihar,25.6093,85.1376
+Danapur,DANA,Patna,Bihar,25.63,85.04
+Muzaffarpur Junction,MUZA,Muzaffarpur,Bihar,26.12,85.39
+Gaya Junction,GAYA,Gaya,Bihar,24.8,85.0
+Bhagalpur Junction,BHAG,Bhagalpur,Bihar,25.25,87.01
+Darbhanga Junction,DARB,Darbhanga,Bihar,26.16,85.9
+Samastipur Junction,SAMA,Samastipur,Bihar,25.86,85.78
+Barauni Junction,BARA,Barauni,Bihar,25.47,85.97
+Katihar Junction,KATI,Katihar,Bihar,25.54,87.57
+Chhapra Junction,CHHA,Chhapra,Bihar,25.78,84.73
+Ara Junction,ARA,Arrah,Bihar,25.56,84.66
+Buxar Junction,BUXA,Buxar,Bihar,25.57,83.98
+Hajipur Junction,HAJI,Hajipur,Bihar,25.69,85.21
+Sonpur Junction,SONP,Sonpur,Bihar,25.7,85.18
+Saharsa Junction,SAHA,Saharsa,Bihar,25.88,86.6
+Purnea Junction,PURN,Purnia,Bihar,25.78,87.47
+Kishanganj,KISH,Kishanganj,Bihar,26.1,87.95
+Dehri-on-Sone,DEHR,Dehri,Bihar,24.91,84.18
+Sasaram Junction,SASA,Sasaram,Bihar,24.95,84.03
+Motihari (Bapudham Motihari),MOTI,Motihari,Bihar,26.65,84.92
+Bettiah,BETT,Bettiah,Bihar,26.8,84.5
+Raxaul Junction,RAXA,Raxaul,Bihar,26.98,84.85
+Siwan Junction,SIWA,Siwan,Bihar,26.22,84.36
+Begusarai,BEGU,Begusarai,Bihar,25.42,86.13
+Khagaria Junction,KHAG,Khagaria,Bihar,25.5,86.47
+Jamalpur Junction,JAMA,Jamalpur,Bihar,25.31,86.49
+Nawada,NAWA,Nawada,Bihar,24.88,85.54
+Jehanabad,JEHA,Jehanabad,Bihar,25.21,84.99
+Jaynagar,JAYN,Jaynagar,Bihar,26.59,86.14
+Narkatiaganj Junction,NARK,Narkatiaganj,Bihar,27.1,84.46
+Ranchi Junction,RANC,Ranchi,Jharkhand,23.34,85.33
+Dhanbad Junction,DHAN,Dhanbad,Jharkhand,23.79,86.43
+Tatanagar Junction (Jamshedpur),TATA,Jamshedpur,Jharkhand,22.77,86.2
+Bokaro Steel City,BOKA,Bokaro,Jharkhand,23.67,86.15
+Jasidih Junction,JASI,Deoghar,Jharkhand,24.51,86.64
+Madhupur Junction,MADH,Madhupur,Jharkhand,24.27,86.64
+Koderma Junction,KODE,Koderma,Jharkhand,24.47,85.59
+Deoghar Junction,DEOG,Deoghar,Jharkhand,24.48,86.7
+Hatia,HATI,Ranchi,Jharkhand,23.3,85.28
+Barkakana Junction,BARK,Barkakana,Jharkhand,23.63,85.48
+Daltonganj,DALT,Daltonganj,Jharkhand,24.04,84.07
+Chandrapura Junction,CHAN,Chandrapura,Jharkhand,23.73,86.02
+Gomoh Junction (NSCB Gomoh),GOMO,Gomoh,Jharkhand,23.87,86.15
+Sahibganj Junction,SAHI,Sahibganj,Jharkhand,25.25,87.64
+Dumka,DUMK,Dumka,Jharkhand,24.27,87.25
+Garhwa Road Junction,GARH,Garhwa,Jharkhand,24.17,83.8
+Ramgarh Cantt,RAMG,Ramgarh,Jharkhand,23.63,85.56
+Chakradharpur,CHAK,Chakradharpur,Jharkhand,22.68,85.63
+Ghatsila,GHAT,Ghatsila,Jharkhand,22.59,86.47
+Pakur,PAKU,Pakur,Jharkhand,24.64,87.84
+Hazaribagh Town,HAZA,Hazaribagh,Jharkhand,23.99,85.36
+Latehar,LATE,Latehar,Jharkhand,23.74,84.5
+Lohardaga,LOHA,Lohardaga,Jharkhand,23.44,84.68
+Chaibasa,CHAI,Chaibasa,Jharkhand,22.55,85.81
+Giridih,GIRI,Giridih,Jharkhand,24.19,86.3
+Khastri (Netaji Subhash Chandra Bose Gomoh),KHAS,Gomoh,Jharkhand,23.87,86.15
+Parasnath,PARA,Parasnath,Jharkhand,23.96,86.14
+Kumardhubi,KUMA,Kumardhubi,Jharkhand,23.79,86.37
+Godda,GODD,Godda,Jharkhand,24.83,87.21
+Barharwa Junction,BARH,Barharwa,Jharkhand,24.86,87.77

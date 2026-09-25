@@ -1,0 +1,64 @@
+:root {
+  /* Color: an ink-navy departure moment against a warm paper daytime surface. */
+  --ink: #101B2D;
+  --ink-soft: #1B2A44;
+  --ink-line: #33455F;
+  --paper: #F6F3EC;
+  --paper-raised: #FFFFFF;
+  --paper-line: #E3DDCD;
+  --text: #17202B;
+  --text-soft: #55617A;
+  --text-on-ink: #F3F1E9;
+  --text-on-ink-soft: #AEB9CC;
+  --amber: #E8A33D;
+  --amber-strong: #D68B1E;
+  --teal: #2F8F81;
+  --teal-soft: #E4F1EE;
+  --red: #C1483B;
+  --red-soft: #FBEAE8;
+
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
+
+  --radius-s: 8px;
+  --radius-m: 14px;
+  --radius-l: 22px;
+  --shadow-card: 0 1px 2px rgba(16, 27, 45, 0.06), 0 8px 24px rgba(16, 27, 45, 0.08);
+  --shadow-float: 0 20px 60px rgba(16, 27, 45, 0.28);
+
+  --container: 1120px;
+
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--text);
+  margin: 0 0 0.4em;
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+p { line-height: 1.55; color: var(--text-soft); margin: 0 0 1em; }
+
+a { color: inherit; }
+
+button { font-family: inherit; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
