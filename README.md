@@ -1,11 +1,11 @@
 # Kinvia
 
 **Kinvia** is a multimodal train + bus journey planning and booking platform. The name is built from
-"kin" and the idea of a journey — Kinvia is about people, connections, and the paths that join them.
+"kin" and the idea of a journey - Kinvia is about people, connections, and the paths that join them.
 
 Unlike a typical booking demo, Kinvia does not assume a trip is a single train or a single bus. A
 `Journey` is a first-class concept made up of one or more `JourneySegment`s, so the planner can — and
-does — chain a feeder bus into a mainline train into a last-mile bus, and sell the whole thing as one
+does - chain a feeder bus into a mainline train into a last-mile bus, and sell the whole thing as one
 ticket with one reference number.
 
 This repository contains the complete backend and frontend, seed data for a working local demo, and
